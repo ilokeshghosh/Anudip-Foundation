@@ -1,3 +1,4 @@
+package Theory;
 import java.util.*;
 public class Odd_even {
 
@@ -12,7 +13,6 @@ public class Odd_even {
 	       else{
 	           System.out.println(a+" is odd");
 	       }
-
 	}
 
 }

@@ -1,3 +1,4 @@
+package Theory;
 import java.util.*;
 public class Simple_Interest {
 
@@ -12,6 +13,7 @@ public class Simple_Interest {
 	        float si= (p*t*r)/100;
 	        System.out.println("The simple interest :"+si);
 	        System.out.println("The total amount is :"+(si+p));
+
 	}
 
 }
