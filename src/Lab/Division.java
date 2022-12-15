@@ -1,7 +1,7 @@
 package Lab;
 
 import java.util.Scanner;
-
+//WAP to check a number 
 public class Division {
 
 	public static void main(String[] args) {
