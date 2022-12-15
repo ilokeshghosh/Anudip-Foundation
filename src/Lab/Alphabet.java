@@ -1,6 +1,6 @@
 package Lab;
 import java.util.Scanner;
-
+//WAP Check whether a character is alphabet or not
 public class Alphabet {
 
 	public static void main(String[] args) {
