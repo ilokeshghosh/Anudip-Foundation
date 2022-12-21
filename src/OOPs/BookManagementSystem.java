@@ -56,7 +56,7 @@ class Book{
 	}
 	public void displayBookByName(String BookName) {
 //		this(BookId,BookPrice,AuthorName,LibraryName,availability);
-		System.out.println("The Details of Book of Name :"+BookName);
+		System.out.println("The Details of \'"+BookName+"\' Book are :");
 		System.out.print("----------------------------------------------------------------------------|\n");
 		System.out.print("|");
 //		System.out.print("Book Name \t\t| "+BookName);
@@ -109,9 +109,9 @@ public class BookManagementSystem {
 		
 		book1.createBook(101, "Don Quixote", 1200, "Miguel de Cervantes", "Kolkata");
 		book2.createBook(102,"Lord of the Rings", 1500, "J.R.R. Tolkien", "Kolkata");
-		book3.createBook(102,"Harry Potter and the Sorcerer's Stone", 4000, "J.K. Rowling", "Kolkata");
-		book4.createBook(103, "And Then There Were None.", 8000, "Agatha Christie", "Kolkata");
-		book5.createBook(104, "Alice's Adventures in Wonderland",2000, "Lewis Carroll.", "Kolkata");
+		book3.createBook(103,"Harry Potter and the Sorcerer's Stone", 4000, "J.K. Rowling", "Kolkata");
+		book4.createBook(104, "And Then There Were None.", 8000, "Agatha Christie", "Kolkata");
+		book5.createBook(105, "Alice's Adventures in Wonderland",2000, "Lewis Carroll.", "Kolkata");
 		Scanner sc= new Scanner(System.in);
 
 		while(true) {
@@ -152,7 +152,7 @@ public class BookManagementSystem {
 				
 				 
 			case 2:
-				System.out.print("Choose Book Name for to Display Details: ");
+				System.out.print("Choose Book Name  to Display Details: ");
 				System.out.print("\n----------------------------------------------------------------------------|\n");
 				System.out.print("|");
 				System.out.print("1)"+book1.BookName);
@@ -186,13 +186,16 @@ public class BookManagementSystem {
 					break;
 				case 4:
 					book4.displayBookByName(book4.BookName);
+					break;
 				case 5:
 					book5.displayBookByName(book5.BookName);
 					break;	
+				default:
+					System.out.println("Please Choose a correct book name ");
 				}
 				break;
 			case 3:
-				System.out.print("Choose Book Name for to Borrow book : ");
+				System.out.print("Choose Book Name  to Borrow book : ");
 				System.out.print("\n----------------------------------------------------------------------------|\n");
 				System.out.print("|");
 				System.out.print("1)"+book1.BookName);
@@ -230,6 +233,8 @@ public class BookManagementSystem {
 				case 5:
 					book5.borrowBook(book5.BookName);
 					break;
+				default:
+					System.out.println("Please Choose a correct book name ");
 			}
 			break;
 			case 4:
