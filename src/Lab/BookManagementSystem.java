@@ -1,6 +1,8 @@
-package OOPs;
+package Lab;
 
 import java.util.Scanner;
+
+
 
 /*
  write a program to create Book management system.
@@ -98,8 +100,9 @@ class Book{
 	
 }
 
+
 public class BookManagementSystem {
-	
+
 	public static void main(String[] args) {
 		Book book1 = new Book();
 		Book book2 = new Book();
@@ -248,6 +251,7 @@ public class BookManagementSystem {
 		
 	}
 	
-	
+
 	}
+
 }
