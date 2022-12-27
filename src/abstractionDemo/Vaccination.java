@@ -9,13 +9,13 @@ abstract class Vaccine{
 	int price;
 	
 	public void firstDose() {
-		sc.nextLine();
-		
-		System.out.println("Enter your name : ");
-		name = sc.nextLine();
 
+//		name = sc.nextLine();
+		System.out.println("Enter your name : ");
+		name = sc.next();
+		sc.nextLine();
 		System.out.println("Enter you citizenship ");
-		citizen = sc.nextLine();
+		citizen = sc.next();
 		
 //		if(citizen==("Indian") || citizen==("INDIAN")||  citizen ==("indian")) 
 		if(citizen.equalsIgnoreCase("Indian"))
@@ -68,7 +68,21 @@ class VaccinationSuccess extends Vaccine{
 
 	@Override
 	public void booster() {
-		
+		System.out.println("Have you received your first and Second Dose ? y/n");
+		char c=  sc.next().charAt(0);
+		if(c=='y' || c=='Y') {
+			System.out.println("Has it been two months since your 2nd Vaccine? y/n");
+			c= sc.next().charAt(0);
+			if(c=='y' || c=='Y') {
+				System.out.println("Booster  dose  vaccinated successfully ");
+			}
+			else {
+				System.out.println("Please come after the completion of 2months ");
+			}
+		}
+		else {
+			System.out.println("Please receive the first dose and Second dose then  come again!!!!");
+		}
 		
 	}
 	
@@ -80,8 +94,9 @@ public class Vaccination {
 		Scanner sc = new Scanner(System.in);
 		VaccinationSuccess vac = new VaccinationSuccess();
 		do {
-		System.out.println("Welcome to Vaccination Center\n");
-		System.out.print("1) First Dose\n2)Second Dose\n3)Booster\n");
+		System.out.println("Welcome to Vaccination E-Center\n");
+		System.out.print("1) First Dose\n2)Second Dose\n3)Booster\n4)Quit\n");
+		System.out.print("Your Option:" );
 		int choice = sc.nextInt();
 		
 		switch(choice) {
@@ -91,6 +106,12 @@ public class Vaccination {
 			System.out.println();
 		}
 		case 3->vac.booster();
+		
+		case 4-> {
+		System.out.println("Exiting the Vaccination E-Center.........................!!");
+		System.out.println("Exited  the Vaccination E-Center........................x  x.....!!");
+		System.exit(0);
+		}
 		}
 		}while(true);
 		
