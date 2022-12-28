@@ -10,12 +10,12 @@ abstract class Vaccine{
 	
 	public void firstDose() {
 
-//		name = sc.nextLine();
+//		sc.nextLine();
 		System.out.println("Enter your name : ");
-		name = sc.next();
+		name = sc.nextLine();
 		sc.nextLine();
 		System.out.println("Enter you citizenship ");
-		citizen = sc.next();
+		citizen = sc.nextLine();
 		
 //		if(citizen==("Indian") || citizen==("INDIAN")||  citizen ==("indian")) 
 		if(citizen.equalsIgnoreCase("Indian"))
@@ -111,7 +111,7 @@ public class Vaccination {
 		System.out.println("Exiting the Vaccination E-Center.........................!!");
 		System.out.println("Exited  the Vaccination E-Center........................x  x.....!!");
 		System.exit(0);
-		}
+			}
 		}
 		}while(true);
 		
