@@ -18,11 +18,13 @@ public class DeletingElementSpecificPosition {
 			ar[i] = sc.nextInt();
 
 		}
+		
 		System.out.println("Original Array");
 
 		for (i = 0; i < ele; i++) {
 			System.out.print(ar[i] + " ");
 		}
+		
 		System.out.println();
 		System.out.println("Enter which position  you want to delete");
 		pos = sc.nextInt();
@@ -36,6 +38,7 @@ public class DeletingElementSpecificPosition {
 			ele--;
 
 			System.out.println("Array after insertion");
+			
 			for (i = 0; i < ele; i++) {
 				System.out.print(ar[i] + " ");
 			}
