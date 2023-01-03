@@ -12,7 +12,7 @@ public class StringDemo {
 			
 			//concept of String literal
 			//we mainly use it to save memory so that new memories are not created
-			String name ="abcd";
+			String name ="abcd"; 
 			String name1="abcd";
 			
 			System.out.println(name.replace('b', 'x'));
