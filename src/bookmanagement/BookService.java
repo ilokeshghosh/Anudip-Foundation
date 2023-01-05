@@ -19,6 +19,7 @@ public class BookService {
 		System.out.println("Enter Book Name : ");
 		String bname = sc.nextLine();
 		
+//		sc.nextLine();
 		
 		System.out.println("Enter Author's Name");
 		String author= sc.nextLine();
@@ -29,7 +30,7 @@ public class BookService {
 		
 		book[index] = new Book(id, bname, price, author);
 		index++;
-		System.out.println("Book Details addes !!\n");
+		System.out.println("Book Details added !!\n");
 		
 		
 		
@@ -37,10 +38,12 @@ public class BookService {
 	}
 	
 	
+	
 	//Get all book details
 	public static void getAllBookDetails() {
 
 			for(int i=0;i<index;i++) {
+				System.out.println("-------------------------------------------------------------------------------");
 				System.out.println("Book Id : "+book[i].getBookId());
 				System.out.println("Book Name : "+book[i].getBookname());
 				System.out.println("Book Author : "+book[i].getAuthor());
@@ -52,6 +55,8 @@ public class BookService {
 	}
 	
 	
+	
+	
 	//Get book details using id
 	public static void getBookDetailsUsingId() {
 		System.out.println("Enter Book ID to search : ");
@@ -60,6 +65,7 @@ public class BookService {
 		for(int i=0;i<index;i++) {
 			if(id==book[i].getBookId()) {
 				
+				System.out.println("-------------------------------------------------------------------------------");
 				System.out.println("Book Id : "+book[i].getBookId());
 				System.out.println("Book Name : "+book[i].getBookname());
 				System.out.println("Book Author : "+book[i].getAuthor());
@@ -81,17 +87,17 @@ public class BookService {
 		
 	}
 	
-	//Get book details using Book Id
+	
+	//Get book details using Book name
 	public static void getBookDetailsUsingName() {
 		System.out.println("Enter Book Name to search : ");
+//		sc.nextLine();
 		String str = sc.nextLine();
-		
 		boolean flag = false;
-		sc.nextLine();
 		for(int i=0;i<index;i++) {
-			String c = book[i].getBookname();
-//			if(str.equalsIgnoreCase(c))
-			if(c==str) {
+			if(str.equalsIgnoreCase(book[i].getBookname()))
+		{
+				System.out.println("-------------------------------------------------------------------------------");
 				System.out.println("Book Id : "+book[i].getBookId());
 				System.out.println("Book Name : "+book[i].getBookname());
 				System.out.println("Book Author : "+book[i].getAuthor());
@@ -102,13 +108,66 @@ public class BookService {
 				break;
 			}
 		}
-		if(flag==false) {
+		if(!flag) {
 			System.out.println("Book Not found");
 			System.out.println();
-		
-	}
+		}
 	}
 	
+	
+	
+	//Get book details using Author name
+	public static void getBookDetailsUsingAuthor() {
+		System.out.println("Enter Author name  to search : ");
+//		sc.nextLine();
+		String str = sc.nextLine();
+		boolean flag = false;
+		for(int i=0;i<index;i++) {
+			if(str.equalsIgnoreCase(book[i].getAuthor()))
+		{
+				System.out.println("-------------------------------------------------------------------------------");
+				System.out.println("Book Id : "+book[i].getBookId());
+				System.out.println("Book Name : "+book[i].getBookname());
+				System.out.println("Book Author : "+book[i].getAuthor());
+				System.out.println("Book Price : "+book[i].getBookPrice());
+				System.out.println("-------------------------------------------------------------------------------");
+				System.out.println();
+				flag=true;
+				
+			}
+		}
+		if(!flag) {
+			System.out.println("Book Not found");
+			System.out.println();
+		}
+	}
+	
+	
+	//Get book details by price filter name
+		public static void getBookDetailsAtPriceRange() {
+			System.out.println("Enter price  to search : ");
+//			sc.nextLine();
+			int price = sc.nextInt();
+			boolean flag = false;
+			for(int i=0;i<index;i++) {
+				if(price>book[i].getBookPrice())
+			{
+					System.out.println("-------------------------------------------------------------------------------");
+					System.out.println("Book Id : "+book[i].getBookId());
+					System.out.println("Book Name : "+book[i].getBookname());
+					System.out.println("Book Author : "+book[i].getAuthor());
+					System.out.println("Book Price : "+book[i].getBookPrice());
+					System.out.println("-------------------------------------------------------------------------------");
+					System.out.println();
+					flag=true;
+					
+				}
+			}
+			if(!flag) {
+				System.out.println("Book Not found");
+				System.out.println();
+			}
+		}
 	
 	
 	
