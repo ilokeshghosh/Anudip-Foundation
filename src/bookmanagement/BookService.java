@@ -91,7 +91,7 @@ public class BookService {
 	//Get book details using Book name
 	public static void getBookDetailsUsingName() {
 		System.out.println("Enter Book Name to search : ");
-//		sc.nextLine();
+		sc.nextLine();
 		String str = sc.nextLine();
 		boolean flag = false;
 		for(int i=0;i<index;i++) {
@@ -145,8 +145,9 @@ public class BookService {
 	
 	//Get book details by price filter name
 		public static void getBookDetailsAtPriceRange() {
-			System.out.println("Enter price  to search : ");
 //			sc.nextLine();
+			System.out.println("Enter price  to search : ");
+			
 			int price = sc.nextInt();
 			boolean flag = false;
 			for(int i=0;i<index;i++) {
