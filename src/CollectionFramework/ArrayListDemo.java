@@ -1,6 +1,8 @@
 package CollectionFramework;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class ArrayListDemo {
@@ -30,8 +32,39 @@ public class ArrayListDemo {
 		System.out.println(list1);
 		System.out.println(list1.size());
 		
+		System.out.println();
 		
+//		Iterator<Integer> it =list1.iterator();
+		Iterator it =list1.iterator();
+		while(it.hasNext()) {
+			System.out.print(it.next()+" ");
+		}
+		
+		System.out.println();
+		
+		//sort arraylist ascending order
+		Collections.sort(list1);
+		System.out.println(list1);
+		
+		Collections.sort(list1,Collections.reverseOrder());
+		System.out.println(list1);
+		
+		System.out.println();
 	
+		System.out.println("Copied List : ");
+		//Copy a arraylist
+		list2.addAll(list1);
+		System.out.println(list2);
+		
+		//Sublist
+		List<Integer> sublist1 = new ArrayList<Integer>(list1.subList(1, 4));
+		
+		//Another Way to create sublist
+		List<Integer> sublist2 = list1.subList(2,4);
+		System.out.println(sublist2);
+		
+		//Search elements
+		System.out.println(list1.contains(26));
 		
 		
 		
