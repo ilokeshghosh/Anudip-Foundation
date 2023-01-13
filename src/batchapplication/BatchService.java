@@ -25,26 +25,26 @@ public class BatchService {
 		System.out.print("Your input : ");
 		id = sc.nextInt();
 		sc.nextLine();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student name : ");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		name = sc.nextLine();
-		sc.nextLine();
-		System.out.print("-------------------------|\n");
+//		sc.nextLine();
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student email :");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		email = sc.nextLine();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student mobile :");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
-		phone = sc.nextInt();
-		
+		phone = sc.nextLong();
+		System.out.print("\n-------------------------|\n");
 		
 	
 		
@@ -69,25 +69,25 @@ public class BatchService {
 		System.out.print("Your input : ");
 		id = sc.nextInt();
 		sc.nextLine();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student name : ");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		name = sc.nextLine();
-		sc.nextLine();
-		System.out.print("-------------------------|\n");
+//		sc.nextLine();
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student email :");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		email = sc.nextLine();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter student mobile :");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
-		phone = sc.nextInt();
+		phone = sc.nextLong();
 		
 		
 	
@@ -167,13 +167,14 @@ public class BatchService {
 	//update java student info
 	public static void updateJavStudentInfo() {
 		
+//		sc.nextLine();
 		System.out.print("\n \n\n-------------------------|\n");
 		System.out.print("|");
 		System.out.print("Enter the student Id : ");
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		id = sc.nextInt();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		for(int i=0;i<jindex;i++) {
 			if(id==java[i].getStdId()) {
 				
@@ -183,7 +184,7 @@ public class BatchService {
 				System.out.print("Enter the student Id : ");
 				System.out.print("\n-------------------------|\n");
 				System.out.print("Your input : ");
-				System.out.print("-------------------------|\n");
+				System.out.print("\n-------------------------|\n");
 				id = sc.nextInt();
 				sc.nextLine();
 				System.out.print("\n-------------------------|\n");
@@ -204,7 +205,7 @@ public class BatchService {
 				System.out.print("Enter student mobile :");
 				System.out.print("\n-------------------------|\n");
 				System.out.print("Your input : ");
-				phone = sc.nextInt();
+				phone = sc.nextLong();
 			
 			
 				java[i] = new Java(id, name,  phone,email);
@@ -231,7 +232,7 @@ public class BatchService {
 		System.out.print("\n-------------------------|\n");
 		System.out.print("Your input : ");
 		id = sc.nextInt();
-		System.out.print("-------------------------|\n");
+		System.out.print("\n-------------------------|\n");
 		for(int i=0;i<aindex;i++) {
 			if(id==Aws[i].getStdId()) {
 				
@@ -261,8 +262,8 @@ public class BatchService {
 				System.out.print("Enter student mobile :");
 				System.out.print("\n-------------------------|\n");
 				System.out.print("Your input : ");
-				phone = sc.nextInt();
-				System.out.print("-------------------------|\n");
+				phone = sc.nextLong();
+				System.out.print("\n-------------------------|\n");
 			
 			
 				Aws[i] = new aws(id, name,  phone,email);
