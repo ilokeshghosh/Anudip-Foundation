@@ -42,10 +42,12 @@ public class Billing {
 	}
 	
 	static void totalbill(int dis) {
-		System.out.println("BILL");
+		System.out.println();
+		System.out.println("CHECKOUT");
 		System.out.println("=======");
 		System.out.println("ITEMS \tQUANTITY\t AMOUNT");
 		System.out.println("=========");
+		
 		double total=0.0;
 		
 		for(Bill b: list) {
@@ -55,18 +57,44 @@ public class Billing {
 			
 		}
 		
-		System.out.println();
-		System.out.println("Amount Before Discount : ");
-		System.out.println("Amount  ₹"+(total));
-		total = total -dis;
-		System.out.println("Amount After Discount : ");
-		System.out.println("Amount  ₹"+(total));
-		System.out.println("Discount Amount : ₹"+dis);
-		double gst = total*0.05;
-		System.out.println("GST : ₹"+gst );
-		System.out.println("--------------");
-		double famount = gst + total;
-		System.out.println("Total : ₹"+famount);
+		
+		 try{
+			 	System.out.println();
+	            System.out.println("Cooking Your Food..........");
+	            Thread.sleep(3000);   
+	            System.out.println("Packing your food........");
+	            Thread.sleep(3000);   
+	            System.out.println("Making Bill..............");
+	            Thread.sleep(3000);
+	            System.out.println("Here is your order.........");
+	            Thread.sleep(3000);
+	            System.out.println("Here is your bill..........");
+	            System.out.println("---Enjoy Your Food----");
+	            
+	            
+	            System.out.println();
+	        	System.out.println("TOTAL BILL");
+	    		System.out.println("=======");
+	    		System.out.println("Amount Before Discount : ");
+	    		System.out.println("Amount  ₹"+(total));
+	    		total = total -dis;
+	    		System.out.println("Amount After Discount : ");
+	    		System.out.println("Amount  ₹"+(total));
+	    		System.out.println("Discount Amount : ₹"+dis);
+	    		double gst = total*0.05;
+	    		System.out.println("GST : ₹"+gst );
+	    		System.out.println("--------------");
+	    		double famount = gst + total;
+	    		System.out.println("Total : ₹"+famount);
+	             
+	             
+	        }
+	        catch(InterruptedException ex){
+	            //  System.out.println("Hi Hello!");
+	            ex.printStackTrace();
+	        }
+		
+		
 	}
 	
 	
