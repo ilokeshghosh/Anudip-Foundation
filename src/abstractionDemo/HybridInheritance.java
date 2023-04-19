@@ -1,4 +1,4 @@
-package abstractionDemo;
+// package abstractionDemo;
 
 //Single inheritance
 class Aa{
